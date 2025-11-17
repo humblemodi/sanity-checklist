@@ -1,0 +1,55 @@
+/* Floating Action Button (FAB) - Notion-style minimal button */
+#sanity-checklist-fab {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #2c2c2c;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+  z-index: 999999;
+}
+
+#sanity-checklist-fab:hover {
+  background: #383838;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+#sanity-checklist-fab svg {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
+
+/* Sidebar Container - Clean, minimal overlay */
+#sanity-checklist-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100vh;
+  background: white;
+  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.15);
+  z-index: 999998;
+  border: none;
+  display: none;
+}
+
+#sanity-checklist-sidebar[data-visible="true"] {
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #sanity-checklist-sidebar {
+    width: 100%;
+  }
+}
